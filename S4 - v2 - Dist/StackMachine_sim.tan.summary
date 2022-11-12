@@ -1,0 +1,36 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 76.100 ns
+From           : StackMachine:inst|ControlLogic:inst3|decode
+To             : DI[15]
+From Clock     : MCLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'MCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 14.66 MHz ( period = 68.200 ns )
+From           : StackMachine:inst|AddressRegs:inst|SPReg:inst18|SP16:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[0]
+To             : StackMachine:inst|ALU:inst4|StatusFlag:inst8|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : MCLK
+To Clock       : MCLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

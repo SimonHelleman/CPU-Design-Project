@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : -0.700 ns
+From           : DI[9]
+To             : busctrll:inst2|Reg16:47|lpm_ff:lpm_ff_component|dffs[9]
+From Clock     : --
+To Clock       : MCLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 35.100 ns
+From           : DataRegs:inst1|Reg16:IRReg|lpm_ff:lpm_ff_component|dffs[14]
+To             : DO[12]
+From Clock     : SCLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.600 ns
+From           : DI[8]
+To             : busctrll:inst2|Reg16:47|lpm_ff:lpm_ff_component|dffs[8]
+From Clock     : --
+To Clock       : MCLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'SCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 17.79 MHz ( period = 56.200 ns )
+From           : DataRegs:inst1|Reg16:IRReg|lpm_ff:lpm_ff_component|dffs[14]
+To             : ALU:inst4|inst8
+From Clock     : SCLK
+To Clock       : SCLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'MCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : Restricted to 125.00 MHz ( period = 8.000 ns )
+From           : busctrll:inst2|BusState:51|IDLE
+To             : busctrll:inst2|BusState:51|IDLE
+From Clock     : MCLK
+To Clock       : MCLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

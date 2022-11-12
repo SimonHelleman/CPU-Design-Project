@@ -1,0 +1,123 @@
+-- Copyright (C) 1991-2008 Altera Corporation
+-- Your use of Altera Corporation's design tools, logic functions 
+-- and other software and tools, and its AMPP partner logic 
+-- functions, and any output files from any of the foregoing 
+-- (including device programming or simulation files), and any 
+-- associated documentation or information are expressly subject 
+-- to the terms and conditions of the Altera Program License 
+-- Subscription Agreement, Altera MegaCore Function License 
+-- Agreement, or other applicable license agreement, including, 
+-- without limitation, that your use is for the sole purpose of 
+-- programming logic devices manufactured by Altera and sold by 
+-- Altera or its authorized distributors.  Please refer to the 
+-- applicable agreement for further details.
+
+-- Quartus II generated Memory Initialization File (.mif)
+
+WIDTH=16;
+DEPTH=128;
+
+ADDRESS_RADIX=HEX;
+DATA_RADIX=HEX;
+
+CONTENT BEGIN
+	00  :   0CFE;
+	01  :   1300;
+	02  :   09FE;
+	03  :   0300;
+	04  :   0070;
+	05  :   1400;
+	06  :   06FE;
+	07  :   1200;
+	08  :   1400;
+	09  :   1700;
+	0A  :   0500;
+	0B  :   1400;
+	0C  :   0300;
+	0D  :   FF00;
+	0E  :   1400;
+	0F  :   06FE;
+	10  :   1200;
+	11  :   1400;
+	12  :   1700;
+	13  :   1600;
+	14  :   0800;
+	15  :   0300;
+	16  :   0003;
+	17  :   1400;
+	18  :   06FE;
+	19  :   0200;
+	1A  :   1004;
+	1B  :   06FE;
+	1C  :   1800;
+	1D  :   09FE;
+	1E  :   11E4;
+	1F  :   0300;
+	20  :   FF00;
+	21  :   1400;
+	22  :   0300;
+	23  :   0003;
+	24  :   1400;
+	25  :   0300;
+	26  :   0001;
+	27  :   1400;
+	28  :   1400;
+	29  :   0A00;
+	2A  :   0040;
+	2B  :   1600;
+	2C  :   0700;
+	2D  :   FF10;
+	2E  :   1600;
+	2F  :   1600;
+	30  :   1600;
+	[31..3F]  :   0000;
+	40  :   0CFE;
+	41  :   1400;
+	42  :   1300;
+	43  :   09FE;
+	44  :   09FF;
+	45  :   06FE;
+	46  :   1400;
+	47  :   06FF;
+	48  :   1400;
+	49  :   0605;
+	4A  :   1200;
+	4B  :   1400;
+	4C  :   1700;
+	4D  :   0500;
+	4E  :   1200;
+	4F  :   09FE;
+	50  :   06FF;
+	51  :   1400;
+	52  :   0604;
+	53  :   0200;
+	54  :   1004;
+	55  :   06FF;
+	56  :   1800;
+	57  :   09FF;
+	58  :   11EC;
+	59  :   1300;
+	5A  :   09FF;
+	5B  :   06FE;
+	5C  :   0000;
+	5D  :   09FE;
+	5E  :   06FF;
+	60  :   0603;
+	61  :   0200;
+	62  :   1004;
+	63  :   06FF;
+	64  :   1800;
+	65  :   09FF;
+	66  :   11F4;
+	67  :   06FE;
+	68  :   0902;
+	69  :   1600;
+	6A  :   0D00;
+	6B  :   0B00;
+	[6C..6F]  :   0000;
+	70  :   0005;
+	71  :   0003;
+	72  :   0002;
+	73  :   0006;
+	[74..7F]  :   0000;
+END;

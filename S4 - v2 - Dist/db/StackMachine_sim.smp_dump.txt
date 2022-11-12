@@ -1,0 +1,22 @@
+
+State Machine - |StackMachine_sim|StackMachine:inst|ControlLogic_vhdl:inst5|CLUState
+Name CLUState.SHRL CLUState.SHRA CLUState.CLRA CLUState.CMPA2 CLUState.CMPA1 CLUState.SUBA2 CLUState.SUBA1 CLUState.ADDA2 CLUState.ADDA1 CLUState.Decode CLUState.Fetch CLUState.Zero 
+CLUState.Zero 0 0 0 0 0 0 0 0 0 0 0 0 
+CLUState.Fetch 0 0 0 0 0 0 0 0 0 0 1 1 
+CLUState.Decode 0 0 0 0 0 0 0 0 0 1 0 1 
+CLUState.ADDA1 0 0 0 0 0 0 0 0 1 0 0 1 
+CLUState.ADDA2 0 0 0 0 0 0 0 1 0 0 0 1 
+CLUState.SUBA1 0 0 0 0 0 0 1 0 0 0 0 1 
+CLUState.SUBA2 0 0 0 0 0 1 0 0 0 0 0 1 
+CLUState.CMPA1 0 0 0 0 1 0 0 0 0 0 0 1 
+CLUState.CMPA2 0 0 0 1 0 0 0 0 0 0 0 1 
+CLUState.CLRA 0 0 1 0 0 0 0 0 0 0 0 1 
+CLUState.SHRA 0 1 0 0 0 0 0 0 0 0 0 1 
+CLUState.SHRL 1 0 0 0 0 0 0 0 0 0 0 1 
+
+State Machine - |StackMachine_sim|StackMachine:inst|busctrll:inst2|BusState:51|BusState
+Name HOLD IDLE READING WRITING 
+IDLE 0 0 0 0 
+READING 0 1 1 0 
+WRITING 0 1 0 1 
+HOLD 1 1 0 0 

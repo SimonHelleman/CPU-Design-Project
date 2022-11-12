@@ -1,0 +1,301 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ARD",
+					"strict" : false
+				},
+				{
+					"name" : "SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "DI[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DI[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OE_ROM",
+					"strict" : false
+				},
+				{
+					"name" : "A[15]",
+					"strict" : false
+				},
+				{
+					"name" : "A[14]",
+					"strict" : false
+				},
+				{
+					"name" : "A[13]",
+					"strict" : false
+				},
+				{
+					"name" : "A[12]",
+					"strict" : false
+				},
+				{
+					"name" : "A[11]",
+					"strict" : false
+				},
+				{
+					"name" : "A[10]",
+					"strict" : false
+				},
+				{
+					"name" : "A[9]",
+					"strict" : false
+				},
+				{
+					"name" : "A[8]",
+					"strict" : false
+				},
+				{
+					"name" : "A[7]",
+					"strict" : false
+				},
+				{
+					"name" : "A[6]",
+					"strict" : false
+				},
+				{
+					"name" : "A[5]",
+					"strict" : false
+				},
+				{
+					"name" : "A[4]",
+					"strict" : false
+				},
+				{
+					"name" : "A[3]",
+					"strict" : false
+				},
+				{
+					"name" : "A[2]",
+					"strict" : false
+				},
+				{
+					"name" : "A[1]",
+					"strict" : false
+				},
+				{
+					"name" : "A[0]",
+					"strict" : false
+				},
+				{
+					"name" : "OE_MR",
+					"strict" : false
+				},
+				{
+					"name" : "RD",
+					"strict" : false
+				},
+				{
+					"name" : "OE_PC",
+					"strict" : false
+				},
+				{
+					"name" : "LD_IR",
+					"strict" : false
+				},
+				{
+					"name" : "IR[15]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[14]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[13]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[12]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[11]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[10]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[9]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[8]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[7]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[6]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[5]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[4]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[3]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[2]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[1]",
+					"strict" : false
+				},
+				{
+					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[15]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[14]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[13]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[12]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[11]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[10]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[9]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[7]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[6]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[5]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[4]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[3]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[2]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[1]",
+					"strict" : false
+				},
+				{
+					"name" : "RES[0]",
+					"strict" : false
+				},
+				{
+					"name" : "MCLK",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,15 @@
+SUBDESIGN ACCMod
+(
+   INC_A, DEC_A 	: INPUT;
+   UPDN, COUNT_EN   : OUTPUT;
+)
+
+BEGIN
+	TABLE
+		INC_A, DEC_A => UPDN, COUNT_EN;
+		0, 0 => 0, 0;
+		1, 0 => 1, 1;
+		0, 1 => 0, 1;
+		1, 1 => 0, 0;
+	END TABLE;
+END;

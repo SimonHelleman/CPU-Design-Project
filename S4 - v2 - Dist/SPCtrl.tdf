@@ -1,0 +1,16 @@
+SUBDESIGN SPCtrl
+(
+   POSTDEC_SP, PREINC_SP, OE_SP 	: INPUT;
+   UPDN, COUNT_EN, OE_RAW, OE_INC   : OUTPUT;
+)
+
+BEGIN
+	TABLE
+		POSTDEC_SP, PREINC_SP, OE_SP => UPDN, COUNT_EN, OE_RAW, OE_INC;
+		0,0,0 => 0,0,0,0;
+		0,0,1 => 0,0,1,0;
+		1,0,X => 0,1,1,0;
+		0,1,X => 1,1,0,1;
+		1,1,x => 0,0,0,0;
+	END TABLE;
+END;

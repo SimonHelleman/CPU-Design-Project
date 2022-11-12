@@ -1,0 +1,56 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 12.000 ns
+From           : FREERUN
+To             : clkgen:28|MCLK
+From Clock     : --
+To Clock       : FCLK
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 64.400 ns
+From           : StackMachine:inst|AddressRegs:inst|SPReg:inst18|SP16:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]
+To             : A[15]
+From Clock     : FCLK
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 7.800 ns
+From           : D[13]
+To             : StackMachine:inst|busctrll:inst2|Reg16:47|lpm_ff:lpm_ff_component|dffs[13]
+From Clock     : --
+To Clock       : FCLK
+Failed Paths   : 0
+
+Type           : Clock Setup: 'FCLK'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.23 MHz ( period = 75.600 ns )
+From           : StackMachine:inst|AddressRegs:inst|SPReg:inst18|SP16:inst|lpm_counter:lpm_counter_component|alt_counter_f10ke:wysi_counter|counter_cell[1]
+To             : StackMachine:inst|ALU:inst4|StatusFlag:inst8|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : FCLK
+To Clock       : FCLK
+Failed Paths   : 0
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 0
+
+--------------------------------------------------------------------------------------
+

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim
+vStackMachine_sim
+Z1 !s110 1668197456
+!i10b 1
+!s100 K`HN_G<7H6]UdachV5bGg0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IURAN:4YWFAbTMkZIXTncI2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1668197453
+8StackMachine_sim.vo
+FStackMachine_sim.vo
+!i122 2
+L0 32 4785
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1668197455.000000
+!s107 StackMachine_sim.vo|
+!s90 -work|work|StackMachine_sim.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@stack@machine_sim
+vStackMachine_sim_vlg_vec_tst
+R1
+!i10b 1
+!s100 kjFiJV4PQf_2W@0k<fe@N1
+R2
+IEi3X`E_R3ITTLYBS8n34h3
+R3
+R0
+w1668197449
+8StackMachine_sim.vwf.vt
+FStackMachine_sim.vwf.vt
+!i122 3
+L0 30 119
+R4
+r1
+!s85 0
+31
+!s108 1668197456.000000
+!s107 StackMachine_sim.vwf.vt|
+!s90 -work|work|StackMachine_sim.vwf.vt|
+!i113 1
+R5
+R6
+n@stack@machine_sim_vlg_vec_tst
