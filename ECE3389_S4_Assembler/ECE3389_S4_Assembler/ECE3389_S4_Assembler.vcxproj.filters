@@ -55,5 +55,14 @@
     <None Include="InstructionSet.csv">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="opcodes_vhdl.vhdl">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="TestCode.ASM">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="InstructionSetTest.ASM">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

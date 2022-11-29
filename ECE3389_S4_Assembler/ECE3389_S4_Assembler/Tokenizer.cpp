@@ -20,56 +20,50 @@ void Tokenizer::NextToken(void)
 {
 	//We gobble up file input one line at a time
 
-	if ((_stringStream != 0) && !*_stringStream)
+	if ((_stringStream != nullptr) && !*_stringStream)
 	{
 		// Means we have a valid, but empty string stream
 		// so delete it.  This must be the end of the line.
 		delete _stringStream;
-		_stringStream = 0;
+		_stringStream = nullptr;
 		_currentToken._type = Token::TokenType::EOL;
 		return;
 	}
 
-	while (true)
+	if (_stringStream == nullptr)
 	{
-		if (_stringStream == 0)
+		//We need to read a new line from the file and
+		//create a string stream for it--IF WE ARE NOT
+		//AT THE END OF THE FILE!!!
+		if (_isStream.eof())
 		{
-			//We need to read a new line from the file and
-			//create a string stream for it--IF WE ARE NOT
-			//AT THE END OF THE FILE!!!
-			if (_isStream.eof())
-			{
-				_currentToken._type = Token::TokenType::END;
-				return;
-			}
-			else
-			{
-				_lineNumber++;
-				_isStream.getline(_inputLine, LINE_LENGTH);
-				//We'll check for a bad input stream, and then
-				//not bother checking for a bad string stream.
-				if (_isStream.bad())
-					throw TokenizerError("Unknown error in input file");
-				_stringStream = new TokenStringStream(_inputLine);
-			}
-		}
-
-		//Gobble white space and blank lines at this point
-		_stringStream->EatWhite();
-		if (_stringStream->EndOfLine())
-		{
-			delete _stringStream;
-			_stringStream = 0;
-			_currentToken._type = Token::TokenType::EOL;
+			_currentToken._type = Token::TokenType::END;
 			return;
 		}
 		else
-			break;
+		{
+			_lineNumber++;
+			_isStream.getline(_inputLine, LINE_LENGTH);
+			//We'll check for a bad input stream, and then
+			//not bother checking for a bad string stream.
+			if (_isStream.bad())
+				throw TokenizerError("Unknown error in input file");
+			_stringStream = new TokenStringStream(_inputLine);
+		}
 	}
 
-	char c;
+	//Gobble white space and blank lines at this point
+	_stringStream->EatWhite();
+	if (_stringStream->EndOfLine())
+	{
+		delete _stringStream;
+		_stringStream = nullptr;
 
-	c = _stringStream->get();
+		_currentToken._type = Token::TokenType::EOL;
+		return;
+	}
+
+	char c = _stringStream->get();
 
 	if (IsGrammarCharacter(c))
 	{

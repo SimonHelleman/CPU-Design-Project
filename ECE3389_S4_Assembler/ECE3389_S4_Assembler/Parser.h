@@ -67,7 +67,7 @@ private:
 	void FatalError(const char* error);
 	void FatalError(const char* error, std::exception& e);
 	void NonFatalError(const char* error, std::exception& e);
-	void NonFatalError(const char* error, bool bEndLine = true);
+	void NonFatalError(const char* error, bool endLine = true);
 	void AdvanceTokenizer();
 	void IgnoreComments();
 

@@ -23,7 +23,19 @@ END ControlLogic_vhdl;
 ARCHITECTURE RTL of ControlLogic_vhdl IS
 TYPE State_type IS 
 (
-    Zero, Fetch, Decode
+    Zero, Fetch, Decode,
+    Inst_ADDA1, Inst_ADDA2, Inst_SUBA1, Inst_SUBA2,
+    Inst_CMPA1, Inst_CMPA2, Inst_CLRA , Inst_SHRA,
+    Inst_SHRL, Inst_INCA, Inst_DECA, Inst_INCX,
+    Inst_DECX, Inst_LDAI, Inst_LDAD1, Inst_LDAD2,
+    Inst_LDAF1, Inst_LDAF2, Inst_LDAX1, Inst_LDAX2,
+    Inst_STAD1, Inst_STAD2, Inst_STAF1, Inst_STAF2,
+    Inst_STAX1, Inst_STAX2, Inst_PUSHA, Inst_POPA,
+    Inst_PUSHX1, Inst_PUSHX2, Inst_POPX, Inst_NOP,
+    Inst_JSR1, Inst_JSR2, Inst_JSR3, Inst_JSR4,
+    Inst_RTS, Inst_LINK1, Inst_LINK2, Inst_LINK3,
+    Inst_UNLINK1, Inst_UNLINK2, Inst_BEQ, Inst_BLT,
+    Inst_BLE, Inst_BRA, Inst_HALT
 );
     SIGNAL CLUState : State_type;
 BEGIN
@@ -40,9 +52,50 @@ BEGIN
                 WHEN Fetch =>
                     CLUState <= Decode;
                 WHEN Decode =>
-                    -- Jump to opcode state
+                    CASE IR(15 DOWNTO 8) IS
+                        WHEN ADDA =>
+                            CLUState <= Inst_ADDA1;
+                        WHEN SUBA =>
+                            CLUState <= Inst_SUBA1;
+                        WHEN CMPA =>
+                            CLUState <= Inst_CMPA1;
+                    END CASE;
+                WHEN Inst_ADDA1 =>
+                    CLUState <= Inst_ADDA2;
+                WHEN Inst_SUBA1 =>
+                    CLUState <= Inst_SUBA2;
+                WHEN Inst_CMPA1 =>
+                    CLUState <= Inst_CMPA2;
+                WHEN Inst_LDAD1 =>
+                    CLUState <= Inst_LDAD2;
+                WHEN Inst_LDAF1 =>
+                    CLUState <= Inst_LDAF2;
+                WHEN Inst_LDAX1 =>
+                    CLUState <= Inst_LDAX2;
+                WHEN Inst_STAD1 =>
+                    CLUState <= Inst_STAD2;
+                WHEN Inst_STAF1 =>
+                    CLUState <= Inst_STAF2;
+                WHEN Inst_STAX1 =>
+                    CLUState <= Inst_STAX2;
+                WHEN Inst_PUSHX1 =>
+                    CLUState <= Inst_PUSHX2;
+                WHEN Inst_JSR1 =>
+                    CLUState <= Inst_JSR2;
+                WHEN Inst_JSR2 =>
+                    CLUState <= INST_JSR3;
+                WHEN Inst_JSR3 =>
+                    CLUState <= INST_JSR4;
+                WHEN Inst_LINK1 =>
+                    CLUState <= Inst_LINK2;
+                WHEN Inst_LINK2 =>
+                    CLUState <= Inst_LINK3;
+                WHEN Inst_UNLINK1 =>
+                    CLUState <= Inst_UNLINK2;
+                WHEN Inst_HALT =>
+                    CLUState <= Inst_HALT; -- Don't do anything again
                 WHEN OTHERS =>
-                    CLUState <= Zero;
+                    CLUState <= Fetch;
             END CASE;
         END IF;
     END PROCESS;
@@ -81,11 +134,261 @@ BEGIN
         ALU_OP <= ALUNOP;
 
         CASE CLUState IS
-            WHEN Zero =>
             WHEN Fetch =>
                 OE_PC <= '1';
                 RD <= '1';
                 LD_IR <= '1';
+                CNT_PC <= '1';
+            WHEN Inst_ADDA1 =>
+                -- MDR = (++SP)
+                PI_SP <= '1';
+                OE_SP <= '1';
+                RD <= '1';
+                LD_MDR <= '1';
+            WHEN Inst_ADDA2 =>
+                -- A += MDR
+                OE_MDR <= '1';
+                OE_AA <= '1';
+                ALU_OP <= ADD;
+                LD_A <= '1';
+            WHEN Inst_SUBA1 =>
+                -- MDR = (++SP)
+                PI_SP <= '1';
+                OE_SP <= '1';
+                RD <= '1';
+                LD_MDR <= '1';
+            WHEN Inst_SUBA2 =>
+                -- A -= MDR
+                OE_MDR <= '1';
+                OE_AA <= '1';
+                ALU_OP <= SUBT;
+                LD_A <= '1';
+            WHEN Inst_CMPA1 =>
+                -- MDR = (++SP)
+                PI_SP <= '1';
+                OE_SP <= '1';
+                RD <= '1';
+                LD_MDR <= '1';
+            WHEN Inst_CMPA2 =>
+                -- A - MDR (result is discarded since we just want to update the flags)
+                OE_MDR <= '1';
+                OE_AA <= '1';
+                ALU_OP <= SUBT;
+            WHEN Inst_CLRA =>
+                CLR_A <= '1';
+            WHEN Inst_SHRA =>
+                -- A = A >> 1
+                OE_AA <= '1';
+                ALU_OP <= SHR;
+                LD_A <= '1';
+            WHEN Inst_SHRL =>
+                -- A = A << 1
+                OE_AA <= '1';
+                ALU_OP <= SHL;
+                LD_A <= '1';
+            WHEN Inst_INCA =>
+                INC_A <= '1';
+            WHEN Inst_DECA =>
+                DEC_A <= '1';
+            WHEN Inst_INCX =>
+                INC_XR <= '1';
+            WHEN Inst_DECX =>
+                DEC_XR <= '1';
+            WHEN Inst_LDAI =>
+                -- A = *(PC++)
+                OE_PC <= '1';
+                RD <= '1';
+                LD_A <= '1';
+                CNT_PC <= '1';
+            WHEN Inst_LDAD1 =>
+                -- MAR = *(PC++)
+                OE_PC <= '1';
+                RD <= '1';
+                LD_MAR <= '1';
+                CNT_PC <= '1';
+            WHEN Inst_LDAD2 =>
+                -- A = *MAR
+                OE_MAR <= '1';
+                RD <= '1';
+                LD_A <= '1';
+            WHEN Inst_LDAF1 =>
+                -- MAR = FB + IRL (sign extended low byte of IR)
+                OE_FP <= '1';
+                OE_IRL <= '1';
+                ALU_OP <= ADD;
+                LD_MAR <= '1';
+            WHEN Inst_LDAF2 =>
+                -- A = *MAR
+                OE_MAR <= '1';
+                RD <= '1';
+                LD_A <= '1';
+            WHEN Inst_LDAX1 =>
+                -- MAR = XR + IRL
+                OE_XR <= '1';
+                OE_IRL <= '1';
+                ALU_OP <= ADD;
+                LD_MAR <= '1';
+            WHEN Inst_LDAX2 =>
+                -- A = *MAR
+                OE_MAR <= '1';
+                RD <= '1';
+                LD_A <= '1';
+            WHEN Inst_STAD1 =>
+                -- MAR = *(PC++)
+                OE_PC <= '1';
+                RD <= '1';
+                LD_MAR <= '1';
+                CNT_PC <= '1';
+            WHEN Inst_STAD2 =>
+                -- *MAR = A
+                OE_MAR <= '1';
+                OE_AD <= '1';
+                WR <= '1';
+            WHEN Inst_STAF1 =>
+                -- MAR = FP + IRL
+                OE_FP <= '1';
+                OE_IRL <= '1';
+                ALU_OP <= ADD;
+                LD_MAR <= '1';
+            WHEN Inst_STAF2 =>
+                -- *MAR = A
+                OE_MAR <= '1';
+                OE_AD <= '1';
+                WR <= '1';
+            WHEN Inst_STAX1 =>
+                -- MAR = XR + IRL
+                OE_XR <= '1';
+                OE_IRL <= '1';
+                ALU_OP <= ADD;
+                LD_MAR <= '1';
+            WHEN Inst_STAX2 =>
+                -- *MAR = A
+                OE_MAR <= '1';
+                OE_AD <= '1';
+                WR <= '1';
+            WHEN Inst_PUSHA =>
+                -- *(SP--) = A
+                OE_SP <= '1';
+                PD_SP <= '1';
+                OE_AD <= '1';
+                WR <= '1';
+            WHEN Inst_POPA =>
+                -- A = *(++SP)
+                PI_SP <= '1';
+                OE_SP <= '1';
+                RD = '1';
+                LD_A <= '1';
+            WHEN Inst_PUSHX1 =>
+                -- Ideally *(SP--) = XR (in 1 cycle)
+                -- but both XR and SP can 
+                -- only be put on the address bus
+                -- one at a time with no option for
+                -- xr to go on the data bus
+
+                -- bandaid solution using the MDR and 2 cycles
+                -- i.e. MDR = XR
+                OE_XR <= '1';
+                ALU_OP <= PASSA;
+                LD_MDR <= '1';
+            WHEN Inst_PUSHX2 =>
+                -- *(SP--) = MDR
+                OE_SP <= '1';
+                PD_SP <= '1';
+                OE_MDR <= '1';
+                WR <= '1';
+            WHEN Inst_POPX =>
+                -- XP = *(++SP)
+                PI_SP <= '1';
+                OE_SP <= '1';
+                RD <= '1';
+                LD_XR <= '1';
+            WHEN Inst_JSR1 =>
+                -- MAR = PC++
+                OE_PC <= '1';
+                ALU_OP <= PASSA;
+                LD_MAR <= '1';
+                CNT_PC <= '1';
+            WHEN Inst_JSR2 =>
+                -- MDR = PC
+                OE_PC <= '1';
+                ALU_OP <= PASSA;
+                LD_MDR <= '1';
+            WHEN Inst_JSR3 =>
+                -- *(SP--) = MDR
+                OE_SP <= '1';
+                PD_SP <= '1';
+                OE_MDR <= '1';
+                WR <= '1';
+            WHEN Inst_JSR4 =>
+                -- PC = *MAR
+                OE_MAR <= '1';
+                ALU_OP <= PASSA;
+                LD_PC <= '1';
+            WHEN Inst_RTS =>
+                -- PC = *(++SP)
+                PI_SP <= '1';
+                OE_SP <= '1';
+                RD <= '1';
+                LD_PC <= '1';
+            WHEN Inst_LINK1 =>
+                -- *SP = FP pt. 1 => MDR = FP
+                OE_FP <= '1';
+                ALU_OP <= PASSA;
+                LD_MDR <= '1';
+            WHEN Inst_LINK2 =>
+                -- *SP = FP pt. 2 => *SP = MDR
+                -- Also do FP = SP--.
+                OE_SP <= '1';
+                OE_MDR <= '1';
+                WR <= '1';
+
+                ALU_OP <= PASSA;
+                LD_FP <= '1';
+                PD_SP <= '1';
+            WHEN Inst_LINK3 =>
+                -- SP = SP + IRL
+                OE_SP <= '1';
+                OE_IRL <= '1';
+                ALU_OP <= ADD;
+                LD_SP <= '1';
+            WHEN Inst_UNLINK1 =>
+                -- SP = FP
+                OE_FP <= '1';
+                ALU_OP <= PASSA;
+                LD_SP <= '1';
+            WHEN Inst_UNLINK2 =>
+                -- FP = *SP
+                OE_SP <= '1';
+                RD <= '1';
+                LD_FP <= '1';
+            WHEN Inst_BEQ =>
+                -- if (Z) { PC = PC + IRL; }
+                IF Z = '1' THEN
+                    OE_PC <= '1';
+                    OE_IRL <= '1';
+                    ALU_OP <= ADD;
+                    LD_PC <= '1';
+                END IF;
+            WHEN Inst_BLT =>
+                -- if (N) { PC = PC + IRL }
+                IF N = '1' THEN
+                    OE_PC <= '1';
+                    OE_IRL <= '1';
+                    ALU_OP <= ADD;
+                    LD_PC <= '1';
+                END IF;
+            WHEN Inst_BLE =>
+                IF N = '1' OR Z = '1' THEN
+                    OE_PC <= '1';
+                    OE_IRL <= '1';
+                    ALU_OP <= ADD;
+                    LD_PC <= '1';
+                END IF;
+            WHEN Inst_BRA =>
+                OE_PC <= '1';
+                OE_IRL <= '1';
+                ALU_OP <= ADD;
+                LD_PC <= '1';
             WHEN OTHERS =>
         END CASE;
     END PROCESS;

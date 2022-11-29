@@ -65,7 +65,7 @@ bool InstructionSet::BuildSet(Tokenizer& t)
 {
 	try
 	{
-		for (;;)
+		while (true)
 		{
 			Token token = t.GetToken();
 			if (token.Type() != Token::TokenType::STRING)

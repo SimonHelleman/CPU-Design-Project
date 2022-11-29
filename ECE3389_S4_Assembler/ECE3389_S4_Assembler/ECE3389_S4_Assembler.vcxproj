@@ -35,6 +35,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="InstructionSet.csv" />
+    <None Include="InstructionSetTest.ASM" />
+    <None Include="opcodes_vhdl.vhdl" />
+    <None Include="TestCode.ASM" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

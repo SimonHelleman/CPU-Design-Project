@@ -253,7 +253,7 @@ ParserState Parser::OriginState(void)
 
 ParserState Parser::DataWordState(void)
 {
-	for (;;)
+	while (true)
 	{
 		if (_token.Type() != Token::TokenType::NUMBER)
 		{

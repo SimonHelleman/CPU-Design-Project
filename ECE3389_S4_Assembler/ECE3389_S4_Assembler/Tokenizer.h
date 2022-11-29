@@ -71,15 +71,13 @@ public:
 };
 
 
-#define LINE_LENGTH 512
-
 class Tokenizer
 {
 
 public:
 	//Tokenizer exports only one constructor, Get and Next
 	Tokenizer(std::istream& stream)
-		: _isStream(stream), _stringStream(0), _lineNumber(0)
+		: _isStream(stream), _stringStream(nullptr), _lineNumber(0)
 	{
 		NextToken();
 	}
@@ -113,9 +111,13 @@ private:
 	void MakeStringNumber(char const* format);
 
 private:
+	static constexpr int LINE_LENGTH = 512;
+
+private:
 	//Data members are private to the tokenizer
 	std::istream& _isStream;   //Use value semantics for the input stream
 	TokenStringStream* _stringStream;
+
 	char _inputLine[LINE_LENGTH];
 	int _lineNumber;
 	Token _currentToken;
