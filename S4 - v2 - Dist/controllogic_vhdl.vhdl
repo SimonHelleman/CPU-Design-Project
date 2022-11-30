@@ -21,22 +21,22 @@ PORT (
 END ControlLogic_vhdl;
 
 ARCHITECTURE RTL of ControlLogic_vhdl IS
-TYPE State_type IS 
-(
-    Zero, Fetch, Decode,
-    Inst_ADDA1, Inst_ADDA2, Inst_SUBA1, Inst_SUBA2,
-    Inst_CMPA1, Inst_CMPA2, Inst_CLRA , Inst_SHRA,
-    Inst_SHRL, Inst_INCA, Inst_DECA, Inst_INCX,
-    Inst_DECX, Inst_LDAI, Inst_LDAD1, Inst_LDAD2,
-    Inst_LDAF1, Inst_LDAF2, Inst_LDAX1, Inst_LDAX2,
-    Inst_STAD1, Inst_STAD2, Inst_STAF1, Inst_STAF2,
-    Inst_STAX1, Inst_STAX2, Inst_PUSHA, Inst_POPA,
-    Inst_PUSHX1, Inst_PUSHX2, Inst_POPX, Inst_NOP,
-    Inst_JSR1, Inst_JSR2, Inst_JSR3, Inst_JSR4,
-    Inst_RTS, Inst_LINK1, Inst_LINK2, Inst_LINK3,
-    Inst_UNLINK1, Inst_UNLINK2, Inst_BEQ, Inst_BLT,
-    Inst_BLE, Inst_BRA, Inst_HALT
-);
+    TYPE State_type IS 
+    (
+        Zero, Fetch, Decode,
+        Inst_ADDA1, Inst_ADDA2, Inst_SUBA1, Inst_SUBA2,
+        Inst_CMPA1, Inst_CMPA2, Inst_CLRA , Inst_SHRA,
+        Inst_SHRL, Inst_INCA, Inst_DECA, Inst_INCX,
+        Inst_DECX, Inst_LDAI, Inst_LDAD1, Inst_LDAD2,
+        Inst_LDAF1, Inst_LDAF2, Inst_LDAX1, Inst_LDAX2,
+        Inst_STAD1, Inst_STAD2, Inst_STAF1, Inst_STAF2,
+        Inst_STAX1, Inst_STAX2, Inst_PUSHA, Inst_POPA,
+        Inst_PUSHX1, Inst_PUSHX2, Inst_POPX, Inst_NOP,
+        Inst_JSR1, Inst_JSR2, Inst_JSR3, Inst_JSR4,
+        Inst_RTS, Inst_LINK1, Inst_LINK2, Inst_LINK3,
+        Inst_UNLINK1, Inst_UNLINK2, Inst_BEQ, Inst_BLT,
+        Inst_BLE, Inst_BRA, Inst_HALT
+    );
     SIGNAL CLUState : State_type;
 BEGIN
     -- The next state logic is in the PROCESS block
@@ -59,6 +59,58 @@ BEGIN
                             CLUState <= Inst_SUBA1;
                         WHEN CMPA =>
                             CLUState <= Inst_CMPA1;
+                        WHEN CLRA =>
+                            CLUState <= Inst_CLRA;
+                        WHEN SHRA =>
+                            CLUState <= Inst_SHRA;
+                        WHEN SHRL =>
+                            CLUState <= Inst_SHRL;
+                        WHEN INCA =>
+                            CLUState <= Inst_INCA;
+                        WHEN DECA =>
+                            CLUState <= Inst_DECA;
+                        WHEN INCX =>
+                            CLUState <= Inst_INCX;
+                        WHEN DECX =>
+                            CLUState <= Inst_DECX;
+                        WHEN LDAI =>
+                            CLUState <= Inst_LDAI;
+                        WHEN LDAD =>
+                            CLUState <= Inst_LDAD1;
+                        WHEN LDAF =>
+                            CLUState <= Inst_LDAF1;
+                        WHEN LDAX =>
+                            CLUState <= Inst_LDAX1;
+                        WHEN STAD =>
+                            CLUState <= Inst_STAD1;
+                        WHEN STAF =>
+                            CLUState <= Inst_STAF1;
+                        WHEN STAX =>
+                            CLUState <= Inst_STAX1;
+                        WHEN PUSHA =>
+                            CLUState <= Inst_PUSHA;
+                        WHEN PUSHX =>
+                            CLUState <= Inst_PUSHX1;
+                        WHEN POPX =>
+                            CLUState <= Inst_POPX;
+                        WHEN JSR =>
+                            CLUState <= Inst_JSR1;
+                        WHEN RTS =>
+                            CLUState <= Inst_RTS;
+                        WHEN LINK =>
+                            CLUState <= Inst_LINK1;
+                        WHEN UNLINK =>
+                            CLUState <= Inst_UNLINK1;
+                        WHEN BEQ =>
+                            CLUState <= Inst_BEQ;
+                        WHEN BLT =>
+                            CLUState <= Inst_BLT;
+                        WHEN BLE =>
+                            CLUState <= Inst_BLE;
+                        WHEN BRA =>
+                            CLUState <= Inst_BRA;
+                        WHEN OTHERS => -- HALT if garbadge
+                            CLUState <= Inst_HALT;
                     END CASE;
                 WHEN Inst_ADDA1 =>
                     CLUState <= Inst_ADDA2;
@@ -140,7 +192,7 @@ BEGIN
                 LD_IR <= '1';
                 CNT_PC <= '1';
             WHEN Inst_ADDA1 =>
-                -- MDR = (++SP)
+                -- MDR = *(++SP)
                 PI_SP <= '1';
                 OE_SP <= '1';
                 RD <= '1';
@@ -152,7 +204,7 @@ BEGIN
                 ALU_OP <= ADD;
                 LD_A <= '1';
             WHEN Inst_SUBA1 =>
-                -- MDR = (++SP)
+                -- MDR = *(++SP)
                 PI_SP <= '1';
                 OE_SP <= '1';
                 RD <= '1';
@@ -164,7 +216,7 @@ BEGIN
                 ALU_OP <= SUBT;
                 LD_A <= '1';
             WHEN Inst_CMPA1 =>
-                -- MDR = (++SP)
+                -- MDR = *(++SP)
                 PI_SP <= '1';
                 OE_SP <= '1';
                 RD <= '1';
@@ -212,7 +264,7 @@ BEGIN
                 RD <= '1';
                 LD_A <= '1';
             WHEN Inst_LDAF1 =>
-                -- MAR = FB + IRL (sign extended low byte of IR)
+                -- MAR = FP + IRL (sign extended low byte of IR)
                 OE_FP <= '1';
                 OE_IRL <= '1';
                 ALU_OP <= ADD;
