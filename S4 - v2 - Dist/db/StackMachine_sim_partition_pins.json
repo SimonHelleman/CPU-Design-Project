@@ -80,6 +80,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "WR",
+					"strict" : false
+				},
+				{
 					"name" : "A[15]",
 					"strict" : false
 				},
@@ -144,6 +148,82 @@
 					"strict" : false
 				},
 				{
+					"name" : "OE_RAM",
+					"strict" : false
+				},
+				{
+					"name" : "WE_RAM",
+					"strict" : false
+				},
+				{
+					"name" : "AWR",
+					"strict" : false
+				},
+				{
+					"name" : "DO[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[13]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DO[0]",
+					"strict" : false
+				},
+				{
 					"name" : "OE_MR",
 					"strict" : false
 				},
@@ -152,11 +232,183 @@
 					"strict" : false
 				},
 				{
+					"name" : "LD_MAR",
+					"strict" : false
+				},
+				{
+					"name" : "OE_MAR",
+					"strict" : false
+				},
+				{
+					"name" : "OE_SP",
+					"strict" : false
+				},
+				{
+					"name" : "LD_SP",
+					"strict" : false
+				},
+				{
+					"name" : "PD_SP",
+					"strict" : false
+				},
+				{
+					"name" : "PL_SP",
+					"strict" : false
+				},
+				{
+					"name" : "OE_FP",
+					"strict" : false
+				},
+				{
+					"name" : "LD_FP",
+					"strict" : false
+				},
+				{
+					"name" : "OE_XR",
+					"strict" : false
+				},
+				{
+					"name" : "LD_XR",
+					"strict" : false
+				},
+				{
+					"name" : "INC_XR",
+					"strict" : false
+				},
+				{
+					"name" : "DEC_XR",
+					"strict" : false
+				},
+				{
+					"name" : "LD_PC",
+					"strict" : false
+				},
+				{
+					"name" : "CNT_PC",
+					"strict" : false
+				},
+				{
 					"name" : "OE_PC",
 					"strict" : false
 				},
 				{
+					"name" : "LD_MDR",
+					"strict" : false
+				},
+				{
+					"name" : "OE_MDR",
+					"strict" : false
+				},
+				{
 					"name" : "LD_IR",
+					"strict" : false
+				},
+				{
+					"name" : "OE_IRL",
+					"strict" : false
+				},
+				{
+					"name" : "LD_A",
+					"strict" : false
+				},
+				{
+					"name" : "CLR_A",
+					"strict" : false
+				},
+				{
+					"name" : "DEC_A",
+					"strict" : false
+				},
+				{
+					"name" : "INC_A",
+					"strict" : false
+				},
+				{
+					"name" : "OE_AA",
+					"strict" : false
+				},
+				{
+					"name" : "OE_AD",
+					"strict" : false
+				},
+				{
+					"name" : "WE_MR",
+					"strict" : false
+				},
+				{
+					"name" : "AC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "AC[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OP[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OP[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ALU_OP[0]",
 					"strict" : false
 				},
 				{
@@ -221,6 +473,70 @@
 				},
 				{
 					"name" : "IR[0]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[15]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[14]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[13]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[12]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[11]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[10]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[9]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[8]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[7]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[6]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[5]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[4]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[3]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[2]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[1]",
+					"strict" : false
+				},
+				{
+					"name" : "PC[0]",
 					"strict" : false
 				},
 				{

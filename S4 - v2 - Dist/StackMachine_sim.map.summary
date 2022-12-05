@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Fri Nov 11 14:59:48 2022
+Analysis & Synthesis Status : Successful - Mon Dec 05 17:18:16 2022
 Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : StackMachine_sim
 Top-level Entity Name : StackMachine_sim
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 38
+Total registers : 198
 Total pins : 152
 Total virtual pins : 0
-Total block memory bits : 65,536
+Total block memory bits : 131,072
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0

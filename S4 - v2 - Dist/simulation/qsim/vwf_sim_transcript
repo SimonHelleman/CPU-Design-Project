@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off StackMachine_sim -c StackMachine_sim --vector_source="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/StackMachine_sim.vwf" --testbench_file="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off StackMachine_sim -c StackMachine_sim --vector_source="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/StackMachine_sim.vwf" --testbench_file="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.vwf.vt"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -26,11 +26,11 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Nov 11 15:10:46 2022
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off StackMachine_sim -c StackMachine_sim --vector_source="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/StackMachine_sim.vwf" --testbench_file="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.vwf.vt"
+    Info: Processing started: Mon Dec 05 17:27:10 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off StackMachine_sim -c StackMachine_sim --vector_source="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/StackMachine_sim.vwf" --testbench_file="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.vwf.vt"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
-ource file when writing test bench files
+noring output pin "LD_MAR" in vector source file when writing test bench files
 
 Completed successfully. 
 
@@ -38,7 +38,7 @@ Completed successfully.
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/" StackMachine_sim -c StackMachine_sim
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/" StackMachine_sim -c StackMachine_sim
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -57,21 +57,21 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Nov 11 15:10:50 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/" StackMachine_sim -c StackMachine_sim
+    Info: Processing started: Mon Dec 05 17:27:13 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/" StackMachine_sim -c StackMachine_sim
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file StackMachine_sim.vo in folder "D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file StackMachine_sim.vo in folder "D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Fri Nov 11 15:10:53 2022
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4732 megabytes
+    Info: Processing ended: Mon Dec 05 17:27:17 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 Completed successfully. 
 
 **** Generating the ModelSim .do script ****
 
-D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.do generated.
+D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.do generated.
 
 Completed successfully. 
 
@@ -81,7 +81,6 @@ C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vsim -c -do StackMachine_sim.do
 
 Reading pref.tcl
 
-
 # 2020.1
 
 
@@ -90,36 +89,37 @@ Reading pref.tcl
 # ** Warning: (vlib-34) Library already exists at "work".
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:10:55 on Nov 11,2022
+# Start time: 17:27:21 on Dec 05,2022
 # vlog -work work StackMachine_sim.vo 
 
 # -- Compiling module StackMachine_sim
+
 # 
 # Top level modules:
 # 	StackMachine_sim
-# End time: 15:10:56 on Nov 11,2022, Elapsed time: 0:00:01
+# End time: 17:27:21 on Dec 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
-# Start time: 15:10:56 on Nov 11,2022
+# Start time: 17:27:21 on Dec 05,2022
 # vlog -work work StackMachine_sim.vwf.vt 
 
 # -- Compiling module StackMachine_sim_vlg_vec_tst
 # 
 # Top level modules:
 # 	StackMachine_sim_vlg_vec_tst
-# End time: 15:10:56 on Nov 11,2022, Elapsed time: 0:00:00
+# End time: 17:27:21 on Dec 05,2022, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.StackMachine_sim_vlg_vec_tst 
-# Start time: 15:10:56 on Nov 11,2022
+# Start time: 17:27:22 on Dec 05,2022
 # Loading work.StackMachine_sim_vlg_vec_tst
 # Loading work.StackMachine_sim
 # Loading cyclonev_ver.cyclonev_io_obuf
 # Loading cyclonev_ver.cyclonev_io_ibuf
-# Loading cyclonev_ver.cyclonev_clkena
 # Loading cyclonev_ver.cyclonev_lcell_comb
 # Loading altera_ver.dffeas
+# Loading cyclonev_ver.cyclonev_clkena
 # Loading cyclonev_ver.cyclonev_ram_block
 # Loading sv_std.std
 # Loading altera_lnsim_ver.generic_m10k
@@ -132,20 +132,20 @@ Reading pref.tcl
 
 # ** Note: $finish    : StackMachine_sim.vwf.vt(131)
 #    Time: 100 us  Iteration: 0  Instance: /StackMachine_sim_vlg_vec_tst
-# End time: 15:10:57 on Nov 11,2022, Elapsed time: 0:00:01
+# End time: 17:27:24 on Dec 05,2022, Elapsed time: 0:00:02
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/StackMachine_sim.vwf...
+Reading D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/StackMachine_sim.vwf...
 
-Reading D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.msim.vcd...
+Reading D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim_20221111151057.sim.vwf
+Writing the resulting VWF to D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/StackMachine_sim_20221205172724.sim.vwf
 
 Finished VCD to VWF conversion.
 

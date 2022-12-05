@@ -2,148 +2,148 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1100mV 85C Model Setup 'inst9'
+Slack : -11.605
+TNS   : -1631.557
+
 Type  : Slow 1100mV 85C Model Setup 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : -7.292
-TNS   : -111.147
+Slack : -11.288
+TNS   : -172.538
 
 Type  : Slow 1100mV 85C Model Setup 'MCLK'
-Slack : -4.559
-TNS   : -324.356
-
-Type  : Slow 1100mV 85C Model Setup 'inst9'
-Slack : -2.477
-TNS   : -45.428
-
-Type  : Slow 1100mV 85C Model Hold 'MCLK'
-Slack : 0.227
-TNS   : 0.000
+Slack : -8.014
+TNS   : -2461.304
 
 Type  : Slow 1100mV 85C Model Hold 'inst9'
-Slack : 0.618
+Slack : -0.081
+TNS   : -0.286
+
+Type  : Slow 1100mV 85C Model Hold 'MCLK'
+Slack : 0.302
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Hold 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : 0.769
+Slack : 3.299
 TNS   : 0.000
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'MCLK'
 Slack : -3.166
-TNS   : -565.499
+TNS   : -1727.087
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'inst9'
 Slack : -0.724
-TNS   : -21.246
+TNS   : -215.990
 
 Type  : Slow 1100mV 85C Model Minimum Pulse Width 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
 Slack : -0.724
-TNS   : -17.874
-
-Type  : Slow 1100mV 0C Model Setup 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : -7.518
-TNS   : -113.873
-
-Type  : Slow 1100mV 0C Model Setup 'MCLK'
-Slack : -4.256
-TNS   : -262.638
+TNS   : -18.347
 
 Type  : Slow 1100mV 0C Model Setup 'inst9'
-Slack : -2.502
-TNS   : -42.141
+Slack : -11.774
+TNS   : -1630.055
 
-Type  : Slow 1100mV 0C Model Hold 'MCLK'
-Slack : -0.141
-TNS   : -0.246
+Type  : Slow 1100mV 0C Model Setup 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
+Slack : -11.360
+TNS   : -174.185
 
-Type  : Slow 1100mV 0C Model Hold 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : 0.607
-TNS   : 0.000
+Type  : Slow 1100mV 0C Model Setup 'MCLK'
+Slack : -7.767
+TNS   : -2371.121
 
 Type  : Slow 1100mV 0C Model Hold 'inst9'
-Slack : 0.748
+Slack : -0.356
+TNS   : -0.654
+
+Type  : Slow 1100mV 0C Model Hold 'MCLK'
+Slack : -0.022
+TNS   : -0.047
+
+Type  : Slow 1100mV 0C Model Hold 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
+Slack : 3.358
 TNS   : 0.000
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -3.166
-TNS   : -564.966
+TNS   : -1725.189
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'inst9'
 Slack : -0.724
-TNS   : -21.268
+TNS   : -216.164
 
 Type  : Slow 1100mV 0C Model Minimum Pulse Width 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
 Slack : -0.724
-TNS   : -18.021
-
-Type  : Fast 1100mV 85C Model Setup 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : -3.183
-TNS   : -48.003
-
-Type  : Fast 1100mV 85C Model Setup 'MCLK'
-Slack : -2.424
-TNS   : -147.722
+TNS   : -18.584
 
 Type  : Fast 1100mV 85C Model Setup 'inst9'
-Slack : -0.937
-TNS   : -15.654
+Slack : -5.016
+TNS   : -669.388
+
+Type  : Fast 1100mV 85C Model Setup 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
+Slack : -4.456
+TNS   : -67.274
+
+Type  : Fast 1100mV 85C Model Setup 'MCLK'
+Slack : -3.117
+TNS   : -897.740
 
 Type  : Fast 1100mV 85C Model Hold 'MCLK'
-Slack : 0.142
-TNS   : 0.000
-
-Type  : Fast 1100mV 85C Model Hold 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : 0.254
+Slack : 0.032
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Hold 'inst9'
-Slack : 0.386
+Slack : 0.219
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
+Slack : 1.354
 TNS   : 0.000
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'MCLK'
 Slack : -2.174
-TNS   : -371.226
+TNS   : -1134.331
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : 0.120
-TNS   : 0.000
+Slack : -0.028
+TNS   : -0.102
 
 Type  : Fast 1100mV 85C Model Minimum Pulse Width 'inst9'
-Slack : 0.143
+Slack : 0.064
 TNS   : 0.000
 
+Type  : Fast 1100mV 0C Model Setup 'inst9'
+Slack : -4.385
+TNS   : -586.798
+
 Type  : Fast 1100mV 0C Model Setup 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : -3.092
-TNS   : -47.054
+Slack : -4.211
+TNS   : -63.765
 
 Type  : Fast 1100mV 0C Model Setup 'MCLK'
-Slack : -1.957
-TNS   : -102.382
-
-Type  : Fast 1100mV 0C Model Setup 'inst9'
-Slack : -0.771
-TNS   : -13.385
+Slack : -2.696
+TNS   : -784.830
 
 Type  : Fast 1100mV 0C Model Hold 'MCLK'
-Slack : 0.040
+Slack : -0.097
+TNS   : -0.909
+
+Type  : Fast 1100mV 0C Model Hold 'inst9'
+Slack : 0.112
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Hold 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : 0.239
-TNS   : 0.000
-
-Type  : Fast 1100mV 0C Model Hold 'inst9'
-Slack : 0.358
+Slack : 1.373
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'MCLK'
 Slack : -2.174
-TNS   : -371.320
+TNS   : -1134.763
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'StackMachine:inst|busctrll:inst2|BusState:51|READING'
-Slack : 0.112
+Slack : 0.003
 TNS   : 0.000
 
 Type  : Fast 1100mV 0C Model Minimum Pulse Width 'inst9'
-Slack : 0.142
+Slack : 0.060
 TNS   : 0.000
 
 ------------------------------------------------------------

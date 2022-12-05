@@ -1,5 +1,5 @@
 EDA Netlist Writer report for StackMachine_sim
-Fri Nov 11 15:10:53 2022
+Mon Dec 05 17:27:17 2022
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Fri Nov 11 15:10:53 2022 ;
+; EDA Netlist Writer Status ; Successful - Mon Dec 05 17:27:17 2022 ;
 ; Revision Name             ; StackMachine_sim                      ;
 ; Top-level Entity Name     ; StackMachine_sim                      ;
 ; Family                    ; Cyclone V                             ;
@@ -66,13 +66,13 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                                                                                ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                                                                           ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim//StackMachine_sim.vo ;
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                                                                                   ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                                                                                              ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim//StackMachine_sim.vo ;
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -95,14 +95,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details, at
     Info: https://fpgasoftware.intel.com/eula.
-    Info: Processing started: Fri Nov 11 15:10:50 2022
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim/" StackMachine_sim -c StackMachine_sim
+    Info: Processing started: Mon Dec 05 17:27:13 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim/" StackMachine_sim -c StackMachine_sim
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file StackMachine_sim.vo in folder "D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file StackMachine_sim.vo in folder "D:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4727 megabytes
-    Info: Processing ended: Fri Nov 11 15:10:53 2022
-    Info: Elapsed time: 00:00:03
+    Info: Peak virtual memory: 4732 megabytes
+    Info: Processing ended: Mon Dec 05 17:27:17 2022
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:03
 
 

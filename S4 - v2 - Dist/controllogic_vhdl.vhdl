@@ -89,10 +89,14 @@ BEGIN
                             CLUState <= Inst_STAX1;
                         WHEN PUSHA =>
                             CLUState <= Inst_PUSHA;
+                        WHEN POPA =>
+                            CLUState <= Inst_POPA;
                         WHEN PUSHX =>
                             CLUState <= Inst_PUSHX1;
                         WHEN POPX =>
                             CLUState <= Inst_POPX;
+                        WHEN NOP =>
+                            CLUState <= Inst_NOP;
                         WHEN JSR =>
                             CLUState <= Inst_JSR1;
                         WHEN RTS =>
@@ -109,7 +113,7 @@ BEGIN
                             CLUState <= Inst_BLE;
                         WHEN BRA =>
                             CLUState <= Inst_BRA;
-                        WHEN OTHERS => -- HALT if garbadge
+                        WHEN OTHERS => -- HALT if garbage
                             CLUState <= Inst_HALT;
                     END CASE;
                 WHEN Inst_ADDA1 =>
@@ -243,9 +247,9 @@ BEGIN
             WHEN Inst_DECA =>
                 DEC_A <= '1';
             WHEN Inst_INCX =>
-                INC_XR <= '1';
+                INC_XP <= '1';
             WHEN Inst_DECX =>
-                DEC_XR <= '1';
+                DEC_XP <= '1';
             WHEN Inst_LDAI =>
                 -- A = *(PC++)
                 OE_PC <= '1';
@@ -276,7 +280,7 @@ BEGIN
                 LD_A <= '1';
             WHEN Inst_LDAX1 =>
                 -- MAR = XR + IRL
-                OE_XR <= '1';
+                OE_XP <= '1';
                 OE_IRL <= '1';
                 ALU_OP <= ADD;
                 LD_MAR <= '1';
@@ -309,7 +313,7 @@ BEGIN
                 WR <= '1';
             WHEN Inst_STAX1 =>
                 -- MAR = XR + IRL
-                OE_XR <= '1';
+                OE_XP <= '1';
                 OE_IRL <= '1';
                 ALU_OP <= ADD;
                 LD_MAR <= '1';
@@ -328,7 +332,7 @@ BEGIN
                 -- A = *(++SP)
                 PI_SP <= '1';
                 OE_SP <= '1';
-                RD = '1';
+                RD <= '1';
                 LD_A <= '1';
             WHEN Inst_PUSHX1 =>
                 -- Ideally *(SP--) = XR (in 1 cycle)
@@ -339,7 +343,7 @@ BEGIN
 
                 -- bandaid solution using the MDR and 2 cycles
                 -- i.e. MDR = XR
-                OE_XR <= '1';
+                OE_XP <= '1';
                 ALU_OP <= PASSA;
                 LD_MDR <= '1';
             WHEN Inst_PUSHX2 =>
@@ -353,7 +357,7 @@ BEGIN
                 PI_SP <= '1';
                 OE_SP <= '1';
                 RD <= '1';
-                LD_XR <= '1';
+                LD_XP <= '1';
             WHEN Inst_JSR1 =>
                 -- MAR = PC++
                 OE_PC <= '1';

@@ -8,52 +8,52 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dD:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim
+dD:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/S4 - v2 - Dist/simulation/qsim
 vStackMachine_sim
-Z1 !s110 1668197456
+Z0 !s110 1670279241
 !i10b 1
-!s100 K`HN_G<7H6]UdachV5bGg0
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IURAN:4YWFAbTMkZIXTncI2
-Z3 VDg1SIo80bB@j0V0VzS_@n1
-R0
-w1668197453
+!s100 4Ec=_]aCH_hE@WJo;j<m00
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ib??O2z6eXY[9ikzQk7ibW1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/OneDrive - The University of Western Ontario/~School/Western/Year 3 - Computer Engineering/ECE 3389A/Final Project/CPU Design Project/S4 - v2 - Dist/simulation/qsim
+w1670279237
 8StackMachine_sim.vo
 FStackMachine_sim.vo
-!i122 2
-L0 32 4785
+!i122 6
+L0 32 21280
 Z4 OV;L;2020.1;71
 r1
 !s85 0
 31
-!s108 1668197455.000000
+Z5 !s108 1670279241.000000
 !s107 StackMachine_sim.vo|
 !s90 -work|work|StackMachine_sim.vo|
 !i113 1
-Z5 o-work work
-Z6 tCvgOpt 0
+Z6 o-work work
+Z7 tCvgOpt 0
 n@stack@machine_sim
 vStackMachine_sim_vlg_vec_tst
-R1
+R0
 !i10b 1
 !s100 kjFiJV4PQf_2W@0k<fe@N1
-R2
+R1
 IEi3X`E_R3ITTLYBS8n34h3
+R2
 R3
-R0
-w1668197449
+w1670279232
 8StackMachine_sim.vwf.vt
 FStackMachine_sim.vwf.vt
-!i122 3
+!i122 7
 L0 30 119
 R4
 r1
 !s85 0
 31
-!s108 1668197456.000000
+R5
 !s107 StackMachine_sim.vwf.vt|
 !s90 -work|work|StackMachine_sim.vwf.vt|
 !i113 1
-R5
 R6
+R7
 n@stack@machine_sim_vlg_vec_tst
